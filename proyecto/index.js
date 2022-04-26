@@ -1,12 +1,19 @@
 const express = require("express");
 
 const app = express();
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("Metodo GET");
 });
 
 app.post("/usuarios", (req, res) => {
+  console.log(req.body);
+  res.send("Metodo POST");
+});
+
+app.post("/json", (req, res) => {
+  console.log(req.body);
   res.send("Metodo POST");
 });
 
