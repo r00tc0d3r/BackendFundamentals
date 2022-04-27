@@ -1,6 +1,7 @@
 const express = require("express");
 
 const app = express();
+app.use(express.text());
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -12,9 +13,9 @@ app.post("/usuarios", (req, res) => {
   res.send("Metodo POST");
 });
 
-app.post("/json", (req, res) => {
-  console.log(req.body);
-  res.send("Metodo POST");
+app.post("/datos-json", (req, res) => {
+  const user = req.body;
+  res.send("Hola " + user.nombre);
 });
 
 app.put("/usuarios", (req, res) => {
