@@ -15,7 +15,10 @@ app.post("/usuarios", (req, res) => {
 
 app.post("/datos-json", (req, res) => {
   const user = req.body;
-  res.send("Hola " + user.nombre);
+  res.json({
+    saludo: "Hola" + user.nombre,
+    domicilio: user.domicilio,
+  });
 });
 
 app.put("/usuarios", (req, res) => {
