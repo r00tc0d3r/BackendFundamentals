@@ -5,11 +5,20 @@ const express = require("express");
 const path = require("path");
 const { port } = require("./config");
 
+// Importando router
+const user = require("./routes/users");
+
 const app = express();
+// Seccion para los middleware
 app.use(express.json());
+app.use("/static", express.static(path.join(__dirname, "static"))); // Middleware para archivos estaticos
+
+// Seccion de codigo para los router
+app.use(users);
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "static/index.html"));
+  console.log(__dirname);
+  res.sendFile(path.join(__dirname, "views/index.html"));
 });
 
 app.listen(port, () => {
