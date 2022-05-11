@@ -6,7 +6,7 @@ const path = require("path");
 const { port } = require("./config");
 
 // Importando router
-const user = require("./routes/users");
+const users = require("./routes/users");
 
 const app = express();
 // Seccion para los middleware
