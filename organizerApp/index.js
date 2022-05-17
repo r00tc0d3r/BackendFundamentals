@@ -1,8 +1,8 @@
 // Dependencies
 const express = require("express");
+const path = require("path");
 
 // Own functions
-const path = require("path");
 const { port } = require("./config");
 
 // Importando router
@@ -18,7 +18,7 @@ app.use(users);
 
 app.get("/", (req, res) => {
   console.log(__dirname);
-  res.sendFile(path.join(__dirname, "views/index.html"));
+  res.sendFile(path.join(__dirname, "views", "index.html"));
 });
 
 app.listen(port, () => {
