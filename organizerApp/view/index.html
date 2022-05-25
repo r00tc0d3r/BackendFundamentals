@@ -11,6 +11,10 @@
   </head>
   <body>
     <h1>Hola</h1>
+    <p id="user"></p>
+    <button id="logout">Cerrar sesión</button>
+    <a href="/registro">Registrarse</a>
+    <a href="/inicio_sesion">Iniciar sesión</a>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, cupiditate?
     </p>
@@ -21,6 +25,23 @@
     <img src="/static/foto.jpeg" alt="Foto de prueba" />
 
     <script>
+      const user = document.getElementById("user");
+      const logoutBtn = document.getElementById("logout");
+      const id = localStorage.getItem("id");
+
+      if (id) {
+        const name = localStorage.getItem("name");
+
+        user.innerText = name;
+
+        logoutBtn.onclick = function () {
+          localStorage.clear();
+          location.href = "/";
+        };
+      } else {
+        logoutBtn.style.display = "none";
+      }
+
       // Asíncrona
       // Async
       fetch("/users") // Inicio
@@ -35,17 +56,17 @@
         }); //Resultado fallido
 
       // Gestión de promesas con Async/await
-      async function request() {
-        try {
-          const resultado = await fetch("/users");
-          const data = await resultado.json();
-          return data;
-        } catch (error) {
-          console.log(error);
-        }
-      }
+      // async function request(){
+      //     try{
+      //         const resultado = await fetch("/users")
+      //         const data = await resultado.json()
+      //         return data
+      //     }catch(error){
+      //         console.log(error)
+      //     }
+      // }
 
-      request();
+      // request()
     </script>
   </body>
 </html>
