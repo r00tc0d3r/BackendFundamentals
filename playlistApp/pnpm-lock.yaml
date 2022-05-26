@@ -25,8 +25,8 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: false
 
-  /@babel/parser/7.18.0:
-    resolution: {integrity: sha512-AqDccGC+m5O/iUStSJy3DGRIUFu7WbY/CppZYwrEUB4N0tZlnI8CSTsgL7v5fHVFmUbRv2sd+yy27o8Ydt4MGg==}
+  /@babel/parser/7.18.3:
+    resolution: {integrity: sha512-rL50YcEuHbbauAFAysNsJA4/f89fGTOBRNs9P81sniKnKAr4xULe5AecolcsKbi88xu0ByWYDj/S1AJ3FSFuSQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
     dependencies:
@@ -310,7 +310,7 @@ packages:
     dev: true
 
   /clone-response/1.0.2:
-    resolution: {integrity: sha1-0dyXOSAxTfZ/vrlCI7TuNQI56Ws=}
+    resolution: {integrity: sha512-yjLXh88P599UOyPTFX0POsd7WxnbsVsGohcwzHOLspIhhpalPw1BcqED8NblyZLKcGrL8dTgMlcaZxV2jAD41Q==}
     dependencies:
       mimic-response: 1.0.1
     dev: true
@@ -353,7 +353,7 @@ packages:
   /constantinople/4.0.1:
     resolution: {integrity: sha512-vCrqcSIq4//Gx74TXXCGnHpulY1dskqLTFGDmhrGxzeXL8lF8kvXv6mpNWlJj1uD4DW23D4ljAqbY4RRaaUZIw==}
     dependencies:
-      '@babel/parser': 7.18.0
+      '@babel/parser': 7.18.3
       '@babel/types': 7.18.2
     dev: false
 
@@ -1713,7 +1713,7 @@ packages:
     resolution: {integrity: sha512-RNGKj82nUPg3g5ygxkQl0R937xLyho1J24ItRCBTr/m1YnZkzJy1hUiHUJrc/VlsDQzsCnInEGSg3bci0Lmd4w==}
     engines: {node: '>= 10.0.0'}
     dependencies:
-      '@babel/parser': 7.18.0
+      '@babel/parser': 7.18.3
       '@babel/types': 7.18.2
       assert-never: 1.2.1
       babel-walk: 3.0.0-canary-5
